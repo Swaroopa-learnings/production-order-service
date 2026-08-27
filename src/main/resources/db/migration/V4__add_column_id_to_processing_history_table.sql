@@ -1,0 +1,2 @@
+ALTER TABLE processing_history
+ADD COLUMN id BIGSERIAL PRIMARY KEY;

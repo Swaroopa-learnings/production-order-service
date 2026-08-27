@@ -1,0 +1,1 @@
+ALTER TABLE production_orders ADD COLUMN status VARCHAR(30) NOT NULL;

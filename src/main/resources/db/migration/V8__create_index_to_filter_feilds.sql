@@ -1,0 +1,1 @@
+CREATE INDEX idx_factory_priority_created ON production_orders(factory_id, priority, created_at);

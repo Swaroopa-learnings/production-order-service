@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: production-order-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/production_order_db?reWriteBatchedInserts=true
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+        order_inserts: true
+        order_updates: true
+
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  # Flyway scans a location and everything beneath it, so this must point at db/migration and not
+  # at db - otherwise db/seed is picked up too and the 100k-row test data lands in every environment.
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+orders:
+  import:
+    batchsize: 1000
+
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+  flyway:
+    locations: classpath:db/migration,classpath:db/seed

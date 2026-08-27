@@ -1,0 +1,6 @@
+ALTER TABLE processing_history
+RENAME COLUMN status TO to_status;
+
+ALTER TABLE processing_history
+ADD COLUMN from_status VARCHAR(30),
+ADD COLUMN timestamp TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP;

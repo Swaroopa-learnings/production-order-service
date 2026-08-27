@@ -1,0 +1,1 @@
+CREATE INDEX idx_factory_status ON production_orders(factory_id, status);
