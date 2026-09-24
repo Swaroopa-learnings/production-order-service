@@ -1,0 +1,11 @@
+version: 1
+repositories:
+  primary: "github.com/Swaroopa-learnings/production-order-service"
+  related: []
+environment:
+  start: "echo 'Configure environment.start in .facility.yml' >&2; exit 1"
+  services:
+    app:
+      port: 3000
+      protocol: http
+      websocket: true
