@@ -2,7 +2,7 @@ spring:
   application:
     name: production-order-service
   datasource:
-    url: jdbc:postgresql://localhost:5432/production_order_db?reWriteBatchedInserts=true
+    url: jdbc:postgresql://localhost:5433/production_order_db?reWriteBatchedInserts=true
     username: postgres
     password: postgres
   jpa:
