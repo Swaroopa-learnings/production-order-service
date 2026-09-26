@@ -3,9 +3,9 @@ repositories:
   primary: "github.com/Swaroopa-learnings/production-order-service"
   related: []
 environment:
-  start: "echo 'Configure environment.start in .facility.yml' >&2; exit 1"
+  start: docker compose up -d --build
   services:
     app:
-      port: 3000
+      port: 8080
       protocol: http
-      websocket: true
+      websocket: false
