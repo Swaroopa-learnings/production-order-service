@@ -4,6 +4,7 @@ repositories:
   related: []
 environment:
   start: docker compose up -d --build
+  ready: curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8080/actuator/health
   services:
     app:
       port: 8080
