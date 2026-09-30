@@ -1,8 +1,10 @@
 ---
 name: security-audit
 description: Audits current repository changes and dependencies for actionable security risks.
-engine: claude_code
-model: claude-opus-4-8
+engine: codex
+model: gpt-5.6-sol
+options:
+  reasoning_effort: high
 enabled: true
 triggers:
   - type: manual
