@@ -1,8 +1,10 @@
 ---
 name: architect
 description: Turns a story into an implementation-ready plan grounded in the repository.
-engine: claude_code
-model: claude-opus-4-8
+engine: codex
+model: gpt-5.6-sol
+options:
+  reasoning_effort: high
 enabled: true
 triggers:
   - type: manual
