@@ -10,10 +10,6 @@ triggers:
   - type: manual
   - type: mcp
   - type: ui
-  - type: github
-    name: pull-request-updated
-    event: pull_request
-    actions: [opened, synchronize, ready_for_review, review_requested]
 ---
 
 # Pull request reviewer
