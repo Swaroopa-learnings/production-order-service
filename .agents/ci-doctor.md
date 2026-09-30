@@ -10,10 +10,6 @@ triggers:
   - type: manual
   - type: mcp
   - type: ui
-  - type: github
-    name: workflow-completed
-    event: workflow_run
-    actions: [completed]
 ---
 
 # CI doctor
