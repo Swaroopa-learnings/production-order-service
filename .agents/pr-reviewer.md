@@ -1,8 +1,10 @@
 ---
 name: pr-reviewer
 description: Reviews a story pull request from a fresh context and reports actionable findings.
-engine: claude_code
-model: claude-sonnet-5
+engine: codex
+model: gpt-5.6-sol
+options:
+  reasoning_effort: high
 enabled: true
 triggers:
   - type: manual
