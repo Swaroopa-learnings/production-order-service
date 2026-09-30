@@ -10,10 +10,6 @@ triggers:
   - type: manual
   - type: mcp
   - type: ui
-  - type: github
-    name: review-submitted
-    event: pull_request_review
-    actions: [submitted]
 ---
 
 # Address review
